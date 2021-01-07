@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="page1.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>FootBall League</title>
+</head>
+<body>
+	
+	<div class="grid-container">
+	  	<div class="grid-item1"><p class="text_format">Soccer</p></div>
+	 	<div class="grid-item3">2</div>
+	 	<div class="grid-item4 polaroid vcenter">
+	 	
+	 		<img id='phts' class="center_image" />
+	  		<!--<table>
+	  		<tr th:each="listSoccer : ${listSoccerPics}">
+	  			<td>	
+	  				<img th:src="@{${'/image/display/'+ listSoccer.spicid}}" />
+	  			</td>  
+	  		
+	  		</tr>
+	  	</table>-->
+	 	</div>
+	  	<div class="grid-item5">
+	  		<p class="copy_format">Copyright © 2021 by Neeharica Madanu</p>
+	  		<p class="copy_format"><a href="#">&nbsp;&nbsp;ABOUT&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">&nbsp;CONTACT&nbsp;</a></p>
+	  	</div>
+  		
+  		
+  		</div>
+  	<script type="text/javascript" th:inline="javascript">
+  	/*<![CDATA[*/
+  		var listPics = eval(/*[[${listSoccerPics}]]*/);
+  		const phts = document.getElementById('phts');
+  		var count = 0;
+  		var timeset = setInterval(dispPic, 5000);
+  		phts.src = '/image/display/1';
+  		
+  		
+  		function dispPic(){
+  	  		if(count == listPics.length){
+  	  			count = 0;
+  	  		}
+  	  		phts.src = '/image/display/'+ listPics[count].spicid;
+  	  		count ++;
+  	  		
+  		}
+  		
+  	/*]]>*/
+  	</script>
+  
+</body>
+</html>

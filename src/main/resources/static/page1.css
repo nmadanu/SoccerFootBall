@@ -26,7 +26,7 @@
 	grid-row-end: 3
 }
 .grid-item3 {
-	background-color: yellow;
+	background-color: #ccff99;
 	/*background-image:url("image/maradona_shots.gif");*/
 	/*background-image:url("image/maradona_play.gif");*/
 	text-align: center;
@@ -34,7 +34,8 @@
 	grid-column-start: 1;
 	grid-column-end: 8;
 	grid-row-start:3;
-	grid-row-end: 7
+	grid-row-end: 7;
+	overflow: auto;
 }
 .grid-item4 {
 	background-color: orange;
@@ -138,7 +139,7 @@ img:hover {
  	text-shadow: 2px 2px 5px white;
  }
  
- a:link, a:visited {
+ .hlink:link, .hlink:visited {
   background-color: #99cc00;
   border-radius: 3rem;
   padding: 1rem;
@@ -149,8 +150,25 @@ img:hover {
   display: inline-block;
 }
 
-a:hover, a:active {
+.hlink:hover, .hlink:active {
   background-color: #ff9966;
+}
+
+.history_format{
+	font-family: "Rancho", serif;
+ 	font-weight: bold;
+ 	font-size: 2.5em; /* 40px/16=2.5em */
+ 	color: #cc6600;
+ 	text-align: left;
+ 	text-shadow: 2px 2px 5px white;
+}
+
+.history_link:link, .history_link:visited{
+	color: #cc6600;
+}
+
+.history_link:hover, .history_link:active{
+	color: #666633;
 }
  
  

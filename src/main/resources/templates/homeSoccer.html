@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <title>FootBall League</title>
@@ -14,7 +15,16 @@
 	
 	<div class="grid-container">
 	  	<div class="grid-item1"><p class="text_format">Soccer</p></div>
-	 	<div class="grid-item3">2</div>
+	 	<div class="grid-item3">
+			<p class="history_format">
+				1. <a class="history_link" th:href="@{/history}">Get to know the History of Soccer - (@KnowAFactNow)</a>
+				<br>
+				2. <a class="history_link" th:href="@{/team}">How a team is formed in Soccer - (@BeAPartNow)</a>
+				<br>
+				3. <a class="history_link" th:href="@{/tournments}">Facts about top European Leagues - (@TeamUpALeagueNow)</a>
+				<br>
+			</p>
+		</div>
 	 	<div class="grid-item4 polaroid vcenter">
 	 	
 	 		<img id='phts' class="center_image" />
@@ -29,7 +39,7 @@
 	 	</div>
 	  	<div class="grid-item5">
 	  		<p class="copy_format">Copyright © 2021 by Neeharica Madanu</p>
-	  		<p class="copy_format"><a href="#">&nbsp;&nbsp;ABOUT&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">&nbsp;CONTACT&nbsp;</a></p>
+	  		<p class="copy_format"><a class="hlink" href="#">&nbsp;&nbsp;ABOUT&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="hlink" href="#">&nbsp;CONTACT&nbsp;</a></p>
 	  	</div>
   		
   		

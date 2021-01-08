@@ -14,11 +14,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.football.live.model.SoccerPics;
 import com.football.live.service.SoccerPicsServiceImpl;
+
+import com.football.live.model.TournmentLeagues;
+import com.football.live.service.TournmentLeaguesServiceImpl;
+
 @Controller
 public class FootBallController {
 	
 	@Autowired
 	private SoccerPicsServiceImpl soccerPicsServiceImpl;
+	@Autowired
+	private TournmentLeaguesServiceImpl tournmentLeaguesServiceImpl;
 	
 	@GetMapping("/")
 	public String homeSoccer(Model model) {
@@ -36,5 +42,21 @@ public class FootBallController {
 
 
 	    response.getOutputStream().close();
+	}
+	
+	@GetMapping("/history")
+	public String historySoccer() {
+		return "soccerHistory";
+	}
+	
+	@GetMapping("/team")
+	public String teamSoccer() {
+		return "teamSoccer";
+	}
+	
+	@GetMapping("/tournments")
+	public String homeTournments(Model model) {
+		model.addAttribute("listTournments", tournmentLeaguesServiceImpl.getAllSortedTournments());
+		return "tournmentLeague";
 	}
 }
